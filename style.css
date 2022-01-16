@@ -1,3 +1,8 @@
+/******************** Google font CSS*****************
+*****************************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +13,8 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
+/* *************Common Section(Reuse)*************
+***************************************************/
 .container{
     /* min-height: 600px; */
     min-height: 65vh;
@@ -23,6 +30,7 @@ body{
     font-weight: 600;
     justify-content: center;
     justify-items: center;
+    margin-top: 10%;
 }
 .all-btn, .all-btn a{
     color: white;
@@ -43,11 +51,11 @@ body{
 .high-light{
     color: sandybrown;
 }
-/* Google font CSS */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
 
-/*************** Nav disign CSS part***********************/
+/*************** Nav disign CSS part*************
+************************************************/
+
 header{
     min-height: 100vh;
 }
@@ -131,10 +139,27 @@ header{
     position: relative;
 }
 
+/************************ Logo section ***************
+******************************************************/
+.logo-section{
+    display: flex;
+    justify-content: center;
+    min-height: 40px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
 
+}
+.logo{
+    margin-right: 30px;
+}
 
-
-/*************************** Gellary********************** */
+/***************************Photo Gellary***************
+***************************************************** */
 .gellary{
     width: 72%;
     margin: 0 auto;
@@ -247,23 +272,17 @@ footer h2{
  ***************************************************/
  
  .contact{
-    width: 100%;
-   /* margin: 0 auto;  */
+   width: 100%;
    display: flex;
    flex-direction: column;
    color: #3A3A3A;
    min-height: 400px;
-   /* justify-content: center; */
-   /* justify-items: center; */
    align-items: center;
 }
 .contact-area{
    min-width: 80%;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
-   /* display: flex; */
-   /* border: 1px solid red; */
-   /* justify-content: space-between; */
 }
 
 .adress{
@@ -292,7 +311,10 @@ footer h2{
 }
 
 
-/******************* Responsive CSS part ************************/
+/******************* Responsive CSS part ***********
+***************************************************/
+
+/*************** For tab or middle screen *******************/
 
 @media (max-width: 1050px) and (min-width: 700px) {
     .photo-gallery{
@@ -307,7 +329,12 @@ footer h2{
     #main-camera{
        width: 90%;
     }
+    .logo-section{
+        flex-wrap: wrap;
+    }
 }
+
+/*************** Mobile Screen and mini screen *******************/
 @media(max-width: 699px){
     .header-content{
         display:block;  
@@ -325,7 +352,6 @@ footer h2{
     #main-camera{
         width: 50%;
      }
-     /* div#order-1  {order: 2;} */
      .contact-area{
         min-width: 70%;
         display: grid;
@@ -342,12 +368,15 @@ footer h2{
        margin-top: 15px;
        font-size: 30px;
    }
-   #order-2{
+   #main-camera{
        order: 1;
+   }
+   .logo-section{
+       flex-wrap: wrap;
    }
 }
 
-
+/***************Some containt Fixed *******************/
 
 @media (min-width:481px) and (max-width:699px) {
     .collection{
@@ -365,7 +394,5 @@ footer h2{
    .nav-links{
     display: hidden;
   }
-  #order-2{
-    order: 1;
-}
+ 
 }
